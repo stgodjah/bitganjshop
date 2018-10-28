@@ -35,8 +35,8 @@ public class MainActivity extends Activity
 		{
 			case R.id.menuAbout:
 				boolean vIsNetwork = Utils.isNoNetworkAvailable(this);
-				String vState = vIsNetwork ? "online":"offline";
-				String vMsg = "Твой Id:" + getUniqueID() + ".Состояние сети:" + vState;
+				String vState = vIsNetwork ? "offline":"online";
+				String vMsg = "Твой Id:" + getUniqueID() + ".\n Состояние сети:" + vState;
 				Toast.makeText(this, vMsg, Toast.LENGTH_LONG).show();
 				return true;
 			case R.id.menuExit:
