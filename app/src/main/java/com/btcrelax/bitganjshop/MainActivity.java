@@ -35,10 +35,9 @@ public class MainActivity extends Activity
 		{
 			case R.id.menuAbout:
 				boolean vIsNetwork = Utils.isNoNetworkAvailable(this);
-				String vId = "Device id:" + getUniqueID();
 				String vState = vIsNetwork ? "online":"offline";
-				Toast.makeText(this, vId, Toast.LENGTH_SHORT).show();
-				Toast.makeText(this, vState,Toast.LENGTH_LONG).show();
+				String vMsg = "Твой Id:" + getUniqueID() + ".Состояние сети:" + vState;
+				Toast.makeText(this, vMsg, Toast.LENGTH_LONG).show();
 				return true;
 			case R.id.menuExit:
 				finish();
